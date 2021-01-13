@@ -1,9 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
 import { useHistory } from "react-router-dom";
 import LoaderButton from "../components/LoaderButton";
 import { onError } from "../libs/errorLib";
 import config from "../config";
+import { API } from "aws-amplify";
 import "./NewNote.css";
 
 export default function NewNote() {
@@ -33,6 +34,20 @@ export default function NewNote() {
     }
 
     setIsLoading(true);
+
+    try {
+      await createNote({ content });
+      history.push("/");
+    } catch (e) {
+      onError(e);
+      setIsLoading(false);
+    }
+  }
+
+  function createNote(note) {
+    return API.post("notes", "/notes", {
+      body: note,
+    });
   }
 
   return (
