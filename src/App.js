@@ -18,10 +18,8 @@ function App() {
 
   async function handleLogout() {
     await Auth.signOut();
-
     userHasAuthenticated(false);
-
-    history.push(HOMEPAGE);
+    history.push("/");
   }
 
   useEffect(() => {
@@ -37,7 +35,6 @@ function App() {
         onError(e);
       }
     }
-
     setIsAuthenticating(false);
   }
 

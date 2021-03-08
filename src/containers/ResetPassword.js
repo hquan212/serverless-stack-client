@@ -99,9 +99,9 @@ export default function ResetPassword() {
             value={fields.code}
             onChange={handleFieldChange}
           />
-          <Form.HelpBlock>
+          <Form.Text>
             Please check your email ({fields.email}) for the confirmation code.
-          </Form.HelpBlock>
+          </Form.Text>
         </Form.Group>
         <hr />
         <Form.Group size="lg" controlId="password">

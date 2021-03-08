@@ -3,3 +3,11 @@
   color: rgb(177, 177, 177);
   padding-top: 14%;
 }
+
+.App {
+  margin-top: 15px;
+}
+
+.App .navbar-brand {
+  font-weight: bold;
+}
