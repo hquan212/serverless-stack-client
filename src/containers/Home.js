@@ -66,14 +66,16 @@ export default function Home() {
       <div className="lander">
         <h1>Scratch</h1>
         <p className="text-muted">
-          A simple note taking app. This app is writting using AWS lambda
-          service. By developing the back end in a microarchitecture format we
-          can scale and host for free. <br></br>TThe user can sign up for an
-          account, create new "Notes" that get stored on a Dynamo DB database
-          using lambda functions and then view the previously stored notes.
-          <br></br>TUsers can also upload files attached to the notes that are
-          stored in their respective S3 buckets.<br></br>The technologies used
-          in this app are ReactJS, AWS Lambda, Serverless, API Gateway,{" "}
+          A simple note taking app. This app's backend is hosted using AWS
+          lambda service. By developing it in a microarchitecture design we can
+          scale and host for these apis free. <br></br>The user can sign up for
+          an account, create new "Notes" that get stored on a Dynamo DB database
+          using these functions and then view the previously stored notes.
+          <br></br>Users can also upload files attached to the notes that are
+          stored in their respective S3 buckets for individual storage.<br></br>
+          The technologies used in this app are ReactJS, AWS Lambda, Serverless,
+          API Gateway, Cognito, User Pools, Identity Pool, CloudFront, S3, and
+          Bootstrap.{" "}
         </p>
       </div>
     );
