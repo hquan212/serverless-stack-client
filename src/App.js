@@ -9,6 +9,8 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { onError } from "./libs/errorLib";
 
+const HOMEPAGE = "https://hquan212.github.io/";
+
 function App() {
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [isAuthenticated, userHasAuthenticated] = useState(false);
@@ -19,7 +21,7 @@ function App() {
 
     userHasAuthenticated(false);
 
-    history.push("/");
+    history.push(HOMEPAGE);
   }
 
   useEffect(() => {
@@ -45,9 +47,12 @@ function App() {
         <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
           <LinkContainer to="/">
             <Navbar.Brand className="font-weight-bold text-muted">
-              Scratch
+              Scratch App
             </Navbar.Brand>
           </LinkContainer>
+          <a href={HOMEPAGE}>
+            <p className="linkedBack">Back to Homepage</p>
+          </a>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav activeKey={window.location.pathname}>

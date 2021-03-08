@@ -65,7 +65,16 @@ export default function Home() {
     return (
       <div className="lander">
         <h1>Scratch</h1>
-        <p className="text-muted">A simple note taking app</p>
+        <p className="text-muted">
+          A simple note taking app. This app is writting using AWS lambda
+          service. By developing the back end in a microarchitecture format we
+          can scale and host for free. <br></br>TThe user can sign up for an
+          account, create new "Notes" that get stored on a Dynamo DB database
+          using lambda functions and then view the previously stored notes.
+          <br></br>TUsers can also upload files attached to the notes that are
+          stored in their respective S3 buckets.<br></br>The technologies used
+          in this app are ReactJS, AWS Lambda, Serverless, API Gateway,{" "}
+        </p>
       </div>
     );
   }
